@@ -1,0 +1,8 @@
+SolARFramework|0.4.0|SolARFramework|bcomBuild|url_repo_artifactory
+SolARModuleExample|0.1.0|SolARModuleExample|bcomBuild|url_repo_artifactory
+SolARModuleExample2|0.1.0|SolARModuleExample2|bcomBuild|url_repo_artifactory
+xpcf|2.0.1|xpcf|thirdParties|http://repository.b-com.com/
+boost|1.68.0|boost|thirdParties|http://repository.b-com.com/
+spdlog|0.14.0|spdlog|thirdParties|http://repository.b-com.com/
+
+
