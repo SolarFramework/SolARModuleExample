@@ -17,31 +17,29 @@
 #include <iostream>
 
 #include "Component2.h"
-#
+
 namespace xpcf  = org::bcom::xpcf;
 
-XPCF_DEFINE_FACTORY_CREATE_INSTANCE(SolAR::MODULES::EXAMPLE::Component2)
+XPCF_DEFINE_FACTORY_CREATE_INSTANCE(SolAR::MODULES::EXAMPLE::Component2);
 
-namespace SolAR {
-	namespace MODULES {
-		namespace EXAMPLE {
-			
-			Component2::Component2():ConfigurableBase(xpcf::toUUID<Component2>()){
-               addInterface<api::example::IInterface2>(this);
-			   SRef<xpcf::IPropertyMap> params = getPropertyRootNode();
-			   LOG_DEBUG(" Component2 constructor");
-			}
+namespace SolAR { namespace MODULES { namespace EXAMPLE {
 
-            Component2::~Component2()
-            {
-                LOG_DEBUG(" Component1 destructor")
-            }
-
-            FrameworkReturnCode Component2::function2(int var){
-                std::cout << "Component 2 : var = " << var << "\n";
-                return FrameworkReturnCode::_SUCCESS;
-			}
-			
-		}
-	}
+Component2::Component2():ConfigurableBase(xpcf::toUUID<Component2>())
+{
+    addInterface<api::example::IInterface2>(this);
+    SRef<xpcf::IPropertyMap> params = getPropertyRootNode();
+    LOG_DEBUG(" Component2 constructor");
 }
+
+Component2::~Component2()
+{
+    LOG_DEBUG(" Component1 destructor")
+}
+
+FrameworkReturnCode Component2::function2(int var)
+{
+    std::cout << "Component 2 : var = " << var << "\n";
+    return FrameworkReturnCode::_SUCCESS;
+}
+
+}}}

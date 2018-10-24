@@ -13,5 +13,4 @@
     #else //_WIN32
         #define EXAMPLE_EXPORT_API
     #endif //_WIN32
-    #include "SolARModuleExample_traits.h"
 #endif //EXAMPLE_API_H

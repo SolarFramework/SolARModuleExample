@@ -21,28 +21,25 @@
 
 #include "xpcf/component/ConfigurableBase.h"
 #include "SolARModuleExampleAPI.h"
+#include "SolARModuleExample_traits.h"
 
-namespace SolAR {
-	namespace MODULES {
-		namespace EXAMPLE {
+namespace SolAR { namespace MODULES { namespace EXAMPLE {
 
-            class EXAMPLE_EXPORT_API Component1 : public org::bcom::xpcf::ConfigurableBase,
-                                                  public api::example::IInterface1
-			{
-				public:
-					Component1();
-                    ~Component1();
+class EXAMPLE_EXPORT_API Component1 : public org::bcom::xpcf::ConfigurableBase,
+        public api::example::IInterface1
+{
+public:
+    Component1();
+    ~Component1();
 
-//                    org::bcom::xpcf::XPCFErrorCode onConfigured() override final;
-                    void unloadComponent () override final;
-                    FrameworkReturnCode function1(int var) override;
+    //                    org::bcom::xpcf::XPCFErrorCode onConfigured() override final;
+    void unloadComponent () override final;
+    FrameworkReturnCode function1(int var) override;
 
-				private:
+private:
 
-			};
+};
 
-		}
-	}
-}
+}}}
 
 #endif // EXAMPLECOMPONENT1_H

@@ -10,8 +10,7 @@ VERSION=0.1.0
 
 DEFINES += MYVERSION=$${VERSION}
 DEFINES += TEMPLATE_LIBRARY
-CONFIG += Cpp11
-CONFIG += c++11
+CONFIG += c++1z
 
 
 CONFIG(debug,debug|release) {
@@ -37,10 +36,10 @@ DEFINES += "_BCOM_SHARED=__declspec(dllexport)"
 
 INCLUDEPATH += interfaces/
 
-HEADERS += interfaces/ExampleAPI.h \
-    interfaces/Example_traits.h \
-    interfaces/Component1.h \
-    interfaces/Component2.h 
+HEADERS += src/SolarModuleExampleAPI.h \
+    interfaces/SolarModuleExample_traits.h \
+    src/Component1.h \
+    src/Component2.h
 
 SOURCES += src/Example.cpp \
     src/Component1.cpp \

@@ -5,17 +5,17 @@
 
 namespace xpcf=org::bcom::xpcf;
 
-XPCF_DECLARE_MODULE("afab90cb-b358-4222-aab1-2558d59ef4db", "SolarModuleExample")
+XPCF_DECLARE_MODULE("afab90cb-b358-4222-aab1-2558d59ef4db", "SolarModuleExample");
 
 
 extern "C" XPCF_MODULEHOOKS_API xpcf::XPCFErrorCode XPCF_getComponent(const boost::uuids::uuid& componentUUID,SRef<xpcf::IComponentIntrospect>& interfaceRef)
 {
-     xpcf::XPCFErrorCode errCode = xpcf::XPCFErrorCode::_FAIL;
-     errCode = xpcf::tryCreateComponent<SolAR::MODULES::EXAMPLE::Component1>(componentUUID,interfaceRef);
-     if (errCode != xpcf::XPCFErrorCode::_SUCCESS)
-     {
-         errCode = xpcf::tryCreateComponent<SolAR::MODULES::EXAMPLE::Component2>(componentUUID,interfaceRef);
-     }
+    xpcf::XPCFErrorCode errCode = xpcf::XPCFErrorCode::_FAIL;
+    errCode = xpcf::tryCreateComponent<SolAR::MODULES::EXAMPLE::Component1>(componentUUID,interfaceRef);
+    if (errCode != xpcf::XPCFErrorCode::_SUCCESS)
+    {
+        errCode = xpcf::tryCreateComponent<SolAR::MODULES::EXAMPLE::Component2>(componentUUID,interfaceRef);
+    }
     return errCode;
 }
 

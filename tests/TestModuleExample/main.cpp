@@ -42,11 +42,11 @@ int main(int argc, char **argv) {
 
     std::cout << "hello\n";
 
-   LOG_ADD_LOG_TO_CONSOLE();
+    LOG_ADD_LOG_TO_CONSOLE();
 
-    #if NDEBUG
-        boost::log::core::get()->set_logging_enabled(false);
-    #endif
+#if NDEBUG
+    boost::log::core::get()->set_logging_enabled(false);
+#endif
 
     SRef<org::bcom::xpcf::IComponentManager> xpcfComponentManager = org::bcom::xpcf::getComponentManagerInstance();
 
@@ -59,13 +59,13 @@ int main(int argc, char **argv) {
     if (xpcfComponentManager->load(configxml.c_str()) != org::bcom::xpcf::_SUCCESS){
 
         LOG_ERROR("Failed to load the configuration file {}", configxml.c_str())
-        return -1;
+                return -1;
 
     }
-    else{
+    else {
 
         LOG_INFO("success to load the configuration file {}", configxml.c_str())
-        std::cout << "success to load the configuration file \n";
+                std::cout << "success to load the configuration file \n";
 
     }
 
@@ -74,11 +74,11 @@ int main(int argc, char **argv) {
     auto c2=xpcfComponentManager->create<SolAR::MODULES::EXAMPLE::Component2>()->bindTo<SolAR::api::example::IInterface2>();
 
 
-    if (c1){
+    if (c1) {
         c1->function1(6);
     }
 
-    if (c2){
+    if (c2) {
         c2->function2(5);
     }
 

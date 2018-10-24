@@ -3,7 +3,7 @@
 
 
     
-   <module uuid="afab90cb-b358-4222-aab1-2558d59ef4db" name="SolarModuleExample" path="$BCOMDEVROOT/bcomBuild/SolARModuleExample/0.1.0/lib/x86_64/shared">
+   <module uuid="afab90cb-b358-4222-aab1-2558d59ef4db" name="SolARModuleExample" path="$BCOMDEVROOT/bcomBuild/SolARModuleExample/0.1.0/lib/x86_64/shared">
 	
         <component uuid="59e251eb-4465-428a-986f-e62deb859343" description="ExampleComponent1">
                 <interface uuid="125f2007-1bf9-421d-9367-fbdc1210d006" description="IComponentIntrospect"/>
