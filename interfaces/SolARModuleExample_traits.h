@@ -2,7 +2,7 @@
 #ifndef SOLAR_MODULE_EXAMPLE_TRAITS_H
 #define SOLAR_MODULE_EXAMPLE_TRAITS_H
 
-#include "xpcf/api/IComponentManager.h"
+#include "xpcf/core/traits.h"
 
 namespace SolAR { namespace MODULES {	namespace EXAMPLE {
 
@@ -13,11 +13,13 @@ class Component2;
 
 XPCF_DEFINE_COMPONENT_TRAITS(SolAR::MODULES::EXAMPLE::Component1,
                              "59e251eb-4465-428a-986f-e62deb859343",
+                             "Component1",
                              "SolAR::MODULES::EXAMPLE::Component1 definition");
 
 
 XPCF_DEFINE_COMPONENT_TRAITS(SolAR::MODULES::EXAMPLE::Component2,
                              "5a5ff620-dace-4e84-861b-cd262e0310ba",
+                             "Component2",
                              "SolAR::MODULES::EXAMPLE::Component2 definition");
 
 

@@ -5,7 +5,7 @@
 
 namespace xpcf=org::bcom::xpcf;
 
-XPCF_DECLARE_MODULE("afab90cb-b358-4222-aab1-2558d59ef4db", "SolarModuleExample");
+XPCF_DECLARE_MODULE("afab90cb-b358-4222-aab1-2558d59ef4db", "SolarModuleExample", "SolarModuleExample module");
 
 
 extern "C" XPCF_MODULEHOOKS_API xpcf::XPCFErrorCode XPCF_getComponent(const boost::uuids::uuid& componentUUID,SRef<xpcf::IComponentIntrospect>& interfaceRef)
